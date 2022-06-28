@@ -1,3 +1,5 @@
+import { Main } from "./pages/Main"
+
 export const App = (): JSX.Element => {
-    return <h1>Hello world</h1>
+    return <Main />
 }
