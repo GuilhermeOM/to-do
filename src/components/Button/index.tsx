@@ -7,6 +7,7 @@ interface ButtonProps {
     h?: string;
     bg?: string;
     color?: string;
+    children?: JSX.Element | JSX.Element[];
     onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -33,6 +34,7 @@ export const Button = (props: ButtonProps): JSX.Element => {
                 style={style}
             >
                 { props.title }
+                { props.children }
             </button>
         </div>
     );

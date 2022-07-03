@@ -1,12 +1,13 @@
-import { Button } from "../Button";
-import { Divider } from "../Divider";
 import "./styles.scss";
 
-export const ToolBar = (): JSX.Element => {
+interface ToolBarProps {
+    children: JSX.Element | JSX.Element[]
+}
+
+export const ToolBar = ({ children }: ToolBarProps): JSX.Element => {
     return (
         <div className="toolbar_container">
-            <Button w="50px" title="+" onClick={() => console.log("click")}/>
-            <Divider color="#1D1E22"/>
+            {children}
         </div>
     );
 }

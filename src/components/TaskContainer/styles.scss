@@ -10,7 +10,6 @@
 
     gap: 8px;
 
-    position: relative;
 
     background: #121214;
 }
@@ -21,9 +20,9 @@
 }
 
 .taskcontainer_header_input {
-    display: block;
+    display: inline-flex;
 
-    width: 100%;
+    width: 90%;
     min-height: 30px;
     padding: 0 5px;
     margin-bottom: 5px;
@@ -37,11 +36,7 @@
     font-weight: 600;
     font-size: 14px;
 
-    &:focus {
-        outline: none;
-        border: 1px solid;
-        border-color: #1DA1F2;
-    }
+    outline: none;
 }
 
 .taskcontainer_tasks_ul {

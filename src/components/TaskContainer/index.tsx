@@ -2,15 +2,19 @@ import { useState } from "react";
 import { Divider } from "../Divider"
 import { Button } from "../Button";
 import { TaskCard } from "../TaskCard";
-import {Trash} from "phosphor-react";
+import {Trash, X} from "phosphor-react";
 import { v4 as uuidv4 } from "uuid";
 import "./styles.scss"
+
+interface TaskContainerProps {
+    children: JSX.Element;
+}
 
 interface Card {
     id: string;
 }
 
-export const TaskContainer = (): JSX.Element => {
+export const TaskContainer = (props: TaskContainerProps): JSX.Element => {
     const [header, setHeader] = useState<string>("");
     const [cards, setCards] = useState<Card[]>([]);
 
@@ -28,6 +32,9 @@ export const TaskContainer = (): JSX.Element => {
                     value={header}
                     onChange={(event): void => handleHeader(event.target.value)}
                 />
+                <div style={{ "display": "inline-flex" }}>
+                    { props.children }
+                </div>
                 <Divider color="#1D1E22" />
             </header>
             <div>
