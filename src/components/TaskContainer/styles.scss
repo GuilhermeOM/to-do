@@ -8,7 +8,7 @@
 
     border-radius: 3px;
 
-    gap: 5px;
+    gap: 8px;
 
     position: relative;
 
@@ -42,4 +42,38 @@
         border: 1px solid;
         border-color: #1DA1F2;
     }
+}
+
+.taskcontainer_tasks_ul {
+    list-style: none;
+}
+
+.taskcontainer_tasks_li {
+    margin-bottom: 8px;
+    width: 100%;
+    display: inline-flex;
+    gap: 10px
+}
+
+.taskcontainer_button_card_delete {
+    display: block;
+
+    width: 26px;
+    height: 30px;
+
+    background: #FF0063;
+
+    border: none;
+    border-radius: 3px;
+
+    &:hover {
+        filter: brightness(70%);
+        cursor: pointer;
+    }
+
+    &:active {
+        filter: brightness(50%);
+    }
+
+    transition: 0.3s;
 }
